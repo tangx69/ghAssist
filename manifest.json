@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "预约助手 V1.0",
+    "description": "自动预约",
+    "version": "1.0",
+    "options_page": "settings.html",
+    "background": {
+        "page": "background.html",
+        //"scripts": ["thirdParty/jquery-3.2.1.js", "background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "预约助手",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "exclude_globs": [],
+            "include_globs": ["http://guahao.zjol.com.cn*"],
+            "js": ["thirdParty/jquery-3.2.1.js", "script.js"],
+            "matches": ["http://*/*", "https://*/*"]
+        }
+    ],
+    "content_security_policy":
+        "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+
+    "permissions": ["activeTab"],
+    "icons": {
+        "128": "icon.png"
+    }
+}

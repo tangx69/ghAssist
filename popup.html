@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> </head>
+<script type="text/javascript" src="thirdParty/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+
+<body>
+  <form id="ysType">
+    <input type="radio" name="ysType" id="ptYs" checked="true" value="1">普通</input>
+    <br />
+    <input type="radio" name="ysType" id="gjYs" value="2">高级</input>
+    <br />
+    <input type="radio" name="ysType" id="isFixYs" value="3" >固定医师</input><input type="text" id="ysName" value=""></input>
+  </form>
+  <br />
+  <form id="timeType">
+    <input type="radio" name="timeType" id="timeSW" checked="true" value="1">上午</input>
+    <input type="radio" name="timeType" id="timeXW" value="2">下午</input>
+    <input type="radio" name="timeType" id="timeQT" value="3">全天</input>
+  </form>
+      
+  <!--
+  <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>  
+  <input class="Wdate" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})"> <font color=red>&lt;- 点我弹出日期控件</font>
+  -->
+  <p>
+    <input id="month" value="6" hidden=true></input>
+    <input id="day" value="9" hidden=true></input>
+    <input id="tps" value="1" hidden=true></input>
+  </p>
+
+  <p>
+    <input type="button" value="开始" id="start" />
+    <input type="button" value="停止" id="stop" />
+  </p>
+</body>
+
+</html>
